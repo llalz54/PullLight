@@ -52,6 +52,9 @@
         const secondsSpan = clock.querySelector('.seconds');
   
         function updateClock() {
+          console.log("End Time:", endtime);
+console.log("Current Time:", new Date());
+console.log("Time Remaining:", Date.parse(endtime) - Date.parse(new Date()));
           const t = getTimeRemaining(endtime);
           daysSpan.innerHTML = t.days;
           hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -59,6 +62,11 @@
           secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
           if (t.total <= 0) {
             clearInterval(timeinterval);
+            daysSpan.innerHTML = "00";
+            hoursSpan.innerHTML = "00";
+            minutesSpan.innerHTML = "00";
+            secondsSpan.innerHTML = "00";
+            return; // Dừng cập nhật nếu hết thời gian
           }
         }
         updateClock();
@@ -66,7 +74,8 @@
       }
   
       $('#countdown-clock').each(function(){
-        const deadline = new Date(Date.parse(new Date()) + 28 * 24 * 60 * 60 * 1000);
+         const deadline = new Date(Date.parse(new Date()) +1 * 3 * 60 * 60 * 1000);
+        //const deadline = new Date("2025-02-20T11:53:10"); 
         initializeClock('countdown-clock', deadline);
       });
     }
