@@ -50,6 +50,8 @@ CSS STRUCTURE:
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
+
+
 :root {
   --accent-color:             #717171;
   --white-color:              #fff;
@@ -89,8 +91,8 @@ CSS STRUCTURE:
 
 /* Fonts */
 :root {
-    --body-font           : "Outfit", sans-serif;
-    --heading-font        : "Outfit", sans-serif;
+    --body-font           : "Roboto", sans-serif;
+    --heading-font        : "Roboto", sans-serif;
 }
 
 @media (min-width: 1850px){
@@ -123,6 +125,7 @@ p {
   color: var(--black-color);
   letter-spacing: 0.01rem;
   line-height: normal;
+  font-size: 1rem;
 }
 a {
   color: var(--black-color);
@@ -228,10 +231,10 @@ h3{
   font-size: 1.875rem;
 }
 h4{
-  font-size: 1.375rem;
+  font-size: 1.2rem;
 }
 h5{
-  font-size: 1.313rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-transform: capitalize;
   letter-spacing: 0.01rem;
@@ -509,7 +512,7 @@ th{
 .preloader-text {
   top: 45%;
   font-size: 66px;
-  height: 500px;
+  height: 300px;
   position: absolute;
   width: 100%;
   margin: auto;
